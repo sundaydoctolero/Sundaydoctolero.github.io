@@ -23,13 +23,22 @@ img{
     height: auto;
 }
 
-header,footer{
+footer{
     background-color: black;
-    height: 100px;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+header{
+    background-color: black;
 }
 
 .sidebar-right{
-    background-color: blue;
+    background-color: #EDEDED;
     color: white;
 }
 
@@ -79,7 +88,6 @@ p{
 }
 
 .main-menu{
-    padding: 1em 1em;
     color: black;
     background-color: yellow;    
 }
@@ -308,4 +316,83 @@ p{
 }
 .gallery-img:nth-child(4n+4){
     flex-basis: 380px;
+}
+
+.sidebar-right{
+    padding: 2em;
+    color: black;
+}
+.widget{
+    background-color: white;
+    margin-bottom: 2em;
+}
+
+.widget-content{
+    padding: .5em 2em;
+}
+
+.sidebar-right ul{
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.sidebar-right ul a {
+    display: block;
+    padding-bottom: .4em;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 810px) and (max-width: 1120px){
+    .sidebar-right{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+/*our menus styles*/
+.main-menu-section {
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+}
+
+.main-menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.main-menu li a {
+	text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+
+	padding: .6em 1em;
+	display: block;
+	transition: all .5s ease;
+}
+
+.main-menu li a:hover {
+    background-color: black;
+    color: yellow;
+}
+
+@media screen and (min-width: 810px) {
+
+	.main-menu ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.main-menu ul li {
+		flex-grow: 1;
+		flex-basis: auto;
+		flex-shrink: 0;
+	}
+
 }
